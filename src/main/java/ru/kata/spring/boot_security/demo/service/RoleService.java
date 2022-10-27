@@ -8,10 +8,6 @@ import java.util.List;
 
 public interface RoleService {
     List<Role> findAllRoles();
-
     void saveRole(Role role);
 
-    void getUserRoles(User user);
-
-    Role applyRole(Role role);
 }

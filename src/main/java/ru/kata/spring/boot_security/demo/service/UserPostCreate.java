@@ -25,7 +25,10 @@ public class UserPostCreate {
 
     @PostConstruct
     private void postConstruct() {
-        userService.save(new User("admin", "admin", 22,
-                "admin", bCryptPasswordEncoder.encode("123"), roleService.findAllRoles()));
+        roleService.saveRole(new Role(1L, "ADMIN"));
+        roleService.saveRole(new Role(2L, "USER"));
+
+//        userService.save(new User("admin1", "admin1", 22,
+//                "admin1", "123", roleService.findAllRoles()));
     }
 }

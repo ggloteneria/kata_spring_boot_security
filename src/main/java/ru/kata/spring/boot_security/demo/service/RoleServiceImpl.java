@@ -31,14 +31,5 @@ public class RoleServiceImpl implements RoleService {
     }
 
 
-    @Override
-    public void getUserRoles(User user){
-        user.setRoles(user.getRoles().stream().map(this::applyRole).collect(Collectors.toList()));
-    }
-    @Override
-    public Role applyRole(Role role){
-        return roleRepository.getById(role.getId());
-    }
-
 
 }
